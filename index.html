@@ -8,6 +8,7 @@
 :root { --bg: #0a0a0a; --text: #e8e4dc; --muted: #7d7a74; --accent: #c8312f; --line: #2a2a2a; }
 * { box-sizing: border-box; }
 body {
+  <img class="side-img" src="bg.jpg" alt="">
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -87,6 +88,26 @@ iframe:hover { filter: grayscale(0); }
 
 @media (max-width: 700px) {
   body::after { width: 200px; height: 280px; opacity: .2; }
+}
+  .side-img {
+  position: fixed;
+  left: 2vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 460px;
+  object-fit: cover;
+  opacity: .35;
+  filter: grayscale(.6);
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 25%, transparent 70%);
+  mask-image: radial-gradient(ellipse at center, #000 25%, transparent 70%);
+}
+.wrap { position: relative; z-index: 1; }
+
+@media (max-width: 700px) {
+  .side-img { width: 200px; height: 280px; opacity: .2; }
 }
   </style>
 </head>
