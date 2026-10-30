@@ -71,17 +71,17 @@ iframe:hover { filter: grayscale(0); }
 .side-img {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 60vw;
   height: 100vh;
   object-fit: cover;
-  object-position: left center;
+  object-position: right center;
   opacity: .16;
   filter: grayscale(.4) blur(1px);
   pointer-events: none;
   z-index: 0;
-  -webkit-mask-image: radial-gradient(ellipse 85% 95% at 0% 50%, #000 15%, transparent 100%);
-  mask-image: radial-gradient(ellipse 85% 95% at 0% 50%, #000 15%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 95% at 100% 50%, #000 15%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 95% at 100% 50%, #000 15%, transparent 100%);
 }
 
 @media (max-width: 700px) {
