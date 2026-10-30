@@ -70,18 +70,18 @@ iframe:hover { filter: grayscale(0); }
 /* Картинка слева: маленькая, полупрозрачная, края растворяются в фон */
 .side-img {
   position: fixed;
-  left: 2vw;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 260px;
-  height: 380px;
+  top: 0;
+  left: 0;
+  width: 60vw;
+  height: 100vh;
   object-fit: cover;
-  opacity: .3;
-  filter: grayscale(.5) blur(1.5px);
+  object-position: left center;
+  opacity: .16;
+  filter: grayscale(.4) blur(1px);
   pointer-events: none;
   z-index: 0;
-  -webkit-mask-image: radial-gradient(ellipse closest-side, #000 35%, transparent 100%);
-  mask-image: radial-gradient(ellipse closest-side, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 95% at 0% 50%, #000 15%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 95% at 0% 50%, #000 15%, transparent 100%);
 }
 
 @media (max-width: 700px) {
